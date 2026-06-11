@@ -1,0 +1,42 @@
+@use "../partials/colors";
+@use "../partials/fonts";
+
+//$bg-color
+//$primary-color
+//$secondary-color
+//$primary-text-color
+//$font-heading
+//$font-body
+.about {
+  background-color: colors.$bg-color;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 0 2em;
+  gap: 1em;
+
+  &__body {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: colors.$primary-color;
+    font-family: fonts.$font-body;
+    font-size: 1 em;
+  }
+  &__title {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    color: colors.$primary-color;
+    font-family: fonts.$font-heading;
+    font-size: 2em;
+  }
+}
