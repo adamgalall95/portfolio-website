@@ -1,13 +1,6 @@
 @use "../partials/colors";
 @use "../partials/fonts";
 
-//$bg-color
-//$primary-color
-//$secondary-color
-//$primary-text-color
-//$font-heading
-//$font-body
-
 .navbar {
   height: 5vh;
   background-color: colors.$bg-color;
@@ -34,10 +27,9 @@
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
 
-  padding: 2em;
-  gap: 1em;
+  padding: 1em;
 
   &__text {
     width: 50%;
@@ -49,13 +41,15 @@
     gap: 1em;
 
     &--name {
-      font-size: 1.5em;
+      font-size: 2em;
       font-weight: bold;
       font-family: fonts.$font-heading;
+      text-shadow: 0.08rem 0.08rem black;
     }
     &--title {
-      font-size: 0.75em;
+      font-size: 1em;
       font-family: fonts.$font-heading;
+      text-shadow: 0.08rem 0.08rem black;
     }
   }
 

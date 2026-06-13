@@ -1,2 +1,58 @@
 @use "../partials/colors";
 @use "../partials/fonts";
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+
+  background-color: colors.$bg-color;
+
+  &__heading {
+    color: colors.$primary-color;
+    font-family: fonts.$font-heading;
+    text-shadow: 0.05rem 0.05rem black;
+    font-size: 2em;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 3em;
+  padding: 2em;
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1em;
+
+  &__image {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 1.5em;
+  }
+  &__title {
+    font-size: 1.25em;
+    font-family: fonts.$font-body;
+    font-weight: bold;
+    color: colors.$primary-color;
+  }
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75em;
+    color: colors.$primary-color;
+    text-shadow: 0.025rem 0.025rem black;
+  }
+}

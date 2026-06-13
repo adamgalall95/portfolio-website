@@ -1,2 +1,51 @@
 @use "../partials/colors";
 @use "../partials/fonts";
+
+.contact {
+  background-color: colors.$primary-color;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1em;
+  padding: 1em;
+
+  &__heading {
+    display: flex;
+    justify-content: center;
+    color: colors.$bg-color;
+    font-family: fonts.$font-heading;
+    text-shadow: 0.08rem 0.08rem black;
+    font-size: 2em;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 2;
+    gap: 1em;
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 0.25em;
+
+    &--logo {
+      color: colors.$bg-color;
+      text-shadow: 0.025rem 0.025rem black;
+      font-size: 1.5em;
+    }
+
+    &--link {
+      color: colors.$bg-color;
+      font-size: 1em;
+      font-family: fonts.$font-body;
+    }
+  }
+}

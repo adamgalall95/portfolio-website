@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
   <body class="body">
     <nav class="navbar" id="navbar">
@@ -15,23 +23,102 @@
     </nav>
     <section class="home" id="home">
       <div class="home__text">
-        <span class="home__text--name">Hello.</span>
-        <span class="home__text--name">I'm Adam</span>
+        <h1 class="home__text--name">I'm Adam</h1>
         <span class="home__text--title">A junior full-stack developer</span>
       </div>
-      <img src="./assets/profile2.jpeg" alt="Profile photo" />
+      <!-- <img src="./assets/profile2.jpeg" alt="Profile photo" /> -->
     </section>
     <section class="about" id="about">
-      <p class="about__body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ea aliquid
-        voluptatibus blanditiis ipsum id quis eveniet consectetur non cum
-        excepturi et voluptatem vero dolores dignissimos dolore quibusdam,
-        suscipit ad!
-      </p>
-      <h1 class="about__title">About me</h1>
+      <h1 class="about__title">About Me</h1>
+      <div class="about__body">
+        <div class="about__text">
+          A junior full-stack developer with experience across marketing
+          analytics, data engineering and sales, and I'm passionate about .....
+        </div>
+        <div class="about__actions">
+          <span class="about__button about__button--fill">see my work</span>
+          <span class="about__button">get in touch</span>
+        </div>
+      </div>
     </section>
-    <section class="skills" id="skills">skills</section>
-    <section class="projects" id="projects">projects</section>
-    <footer class="contact" id="contact">footer</footer>
+    <section class="skills" id="skills">
+      <h1 class="skills__heading">Technical Skills</h1>
+      <div class="skills__list">
+        <div class="skills__card">
+          <i class="devicon-html5-plain skills__card--logo"></i>
+          <span class="skills__card--title">Html</span>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-css3-plain skills__card--logo"></i>
+          <span class="skills__card--title">CSS3</span>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-sass-original skills__card--logo"></i>
+          <span class="skills__card--title">SCSS</span>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-javascript-plain skills__card--logo"></i>
+          <span class="skills__card--title">JavaScript</span>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-git-plain skills__card--logo"></i>
+          <span class="skills__card--title">Git</span>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-python-plain skills__card--logo"></i>
+          <span class="skills__card--title">Python</span>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-azuresqldatabase-plain skills__card--logo"></i>
+          <span class="skills__card--title">SQL</span>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <h1 class="projects__heading">My projects</h1>
+      <div class="projects-container">
+        <div class="projects-card">
+          <img class="projects-card__image" src="./assets/final.png" />
+          <span class="projects-card__title">Morse Coder</span>
+          <div class="projects-card__icons">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="projects-card">
+          <img class="projects-card__image" src="./assets/final.png" />
+          <span class="projects-card__title">Morse Coder</span>
+          <div class="projects-card__icons">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="projects-card">
+          <img class="projects-card__image" src="./assets/final.png" />
+          <span class="projects-card__title">Morse Coder</span>
+          <div class="projects-card__icons">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="contact" id="contact">
+      <h1 class="contact__heading">Get in touch</h1>
+      <div class="contact-container">
+        <div class="contact-card">
+          <i class="fa-solid fa-envelope contact-card--logo"></i>
+          <span class="contact-card--link">aayosri@hotmail.com</span>
+        </div>
+        <div class="contact-card">
+          <i class="fa-brands fa-linkedin contact-card--logo"></i>
+          <span class="contact-card--link">@ahmed-galall/</span>
+        </div>
+        <div class="contact-card">
+          <i class="fa-brands fa-github contact-card--logo"></i>
+          <span class="contact-card--link">@adamgalall95</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
