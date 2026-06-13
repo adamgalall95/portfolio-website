@@ -1,2 +1,52 @@
 @use "../partials/colors";
 @use "../partials/fonts";
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1em;
+  gap: 1em;
+  color: colors.$bg-color;
+  background-color: colors.$primary-color;
+
+  &__heading {
+    color: colors.$bg-color;
+    font-family: fonts.$font-heading;
+    text-shadow: 0.08rem 0.08rem black;
+    font-size: 2em;
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 1em;
+  }
+
+  &__card {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5em;
+
+    &--logo {
+      color: colors.$bg-color;
+      font-size: 1.5em;
+      text-shadow: 0.05rem 0.05rem black;
+    }
+
+    &--title {
+      color: colors.$bg-color;
+      font-size: 0.75em;
+      font-family: fonts.$font-body;
+    }
+  }
+}
