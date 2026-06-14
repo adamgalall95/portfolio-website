@@ -1,5 +1,6 @@
 @use "../partials/colors";
 @use "../partials/fonts";
+@use "../mixins/media";
 
 .navbar {
   height: 5vh;
@@ -10,13 +11,13 @@
   align-items: center;
   justify-content: flex-end;
 
-  gap: 1em;
-  padding: 0 1em;
+  gap: 0.5em;
+  padding: 0 0.75em;
 
   &__link {
     color: colors.$primary-color;
     font-family: fonts.$font-heading;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: bold;
     text-decoration: none;
   }
@@ -28,8 +29,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  padding: 1em;
+  justify-content: flex-end;
+  padding-left: 1em;
 
   &__text {
     width: 50%;
@@ -55,5 +56,11 @@
 
   img {
     width: 50%;
+  }
+
+  @include media.breakpoint(desktop) {
+    img {
+      width: 30%;
+    }
   }
 }
