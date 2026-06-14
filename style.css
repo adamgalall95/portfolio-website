@@ -243,13 +243,13 @@ input[type=checkbox], input[type=radio] {
   flex: row;
   align-items: center;
   justify-content: flex-end;
-  gap: 1em;
-  padding: 0 1em;
+  gap: 0.5em;
+  padding: 0 0.75em;
 }
 .navbar__link {
   color: #d74339;
   font-family: "Arvo", serif;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: bold;
   text-decoration: none;
 }
@@ -259,7 +259,8 @@ input[type=checkbox], input[type=radio] {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1em;
+  justify-content: flex-end;
+  padding-left: 1em;
 }
 .home__text {
   width: 50%;
@@ -283,6 +284,11 @@ input[type=checkbox], input[type=radio] {
 .home img {
   width: 50%;
 }
+@media (min-width: 768px) {
+  .home img {
+    width: 30%;
+  }
+}
 
 .about {
   height: 25vh;
@@ -294,24 +300,22 @@ input[type=checkbox], input[type=radio] {
   gap: 1em;
 }
 .about__title {
-  width: 50%;
+  width: 35%;
   height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
   color: #d74339;
   font-family: "Arvo", serif;
-  text-shadow: 0.05rem 0.05rem black;
   font-size: 2em;
 }
 .about__body {
-  width: 50%;
+  width: 65%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1em;
+  gap: 0.75em;
 }
 .about__text {
   color: #d74339;
@@ -377,19 +381,18 @@ input[type=checkbox], input[type=radio] {
   color: #f6f6ee;
   font-size: 0.75em;
   font-family: "IBM Plex Sans", sans-serif;
+  text-shadow: 0.05rem 0.05rem black;
 }
 
 .projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
   background-color: #f6f6ee;
 }
 .projects__heading {
   color: #d74339;
   font-family: "Arvo", serif;
-  text-shadow: 0.05rem 0.05rem black;
   font-size: 2em;
 }
 
@@ -427,7 +430,6 @@ input[type=checkbox], input[type=radio] {
   flex-direction: row;
   gap: 0.75em;
   color: #d74339;
-  text-shadow: 0.025rem 0.025rem black;
 }
 
 .contact {
@@ -468,6 +470,7 @@ input[type=checkbox], input[type=radio] {
   color: #f6f6ee;
   font-size: 1em;
   font-family: "IBM Plex Sans", sans-serif;
+  text-shadow: 0.025rem 0.025rem black;
 }
 
 /*# sourceMappingURL=style.css.map */
