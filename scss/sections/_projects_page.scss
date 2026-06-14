@@ -1,5 +1,6 @@
 @use "../partials/colors";
 @use "../partials/fonts";
+@use "../mixins/media";
 
 .projects {
   display: flex;
@@ -8,48 +9,74 @@
 
   background-color: colors.$bg-color;
 
-  &__heading {
-    color: colors.$primary-color;
-    font-family: fonts.$font-heading;
-    font-size: 2em;
-  }
-}
-
-.projects-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  gap: 3em;
-  padding: 2em;
-}
-
-.projects-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  gap: 1em;
-
-  &__image {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 1.5em;
-  }
   &__title {
-    font-size: 1.25em;
-    font-family: fonts.$font-body;
-    font-weight: bold;
     color: colors.$primary-color;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: fonts.$font-heading;
   }
-  &__icons {
+
+  .projects-container {
     display: flex;
     flex-direction: row;
-    gap: 0.75em;
-    color: colors.$primary-color;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 3em;
+    padding: 2em;
+  }
+
+  .projects-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1em;
+
+    &__image {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 1.5em;
+    }
+    &__title {
+      font-size: 1.25em;
+      font-family: fonts.$font-body;
+      font-weight: bold;
+      color: colors.$primary-color;
+    }
+    &__icons {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75em;
+      color: colors.$primary-color;
+    }
+  }
+}
+
+@include media.breakpoint(desktop) {
+  .projects {
+    &__title {
+      color: colors.$primary-color;
+      font-size: 5em;
+    }
+    .projects-container {
+      gap: 6.5em;
+      padding-bottom: 5em;
+    }
+    .projects-card {
+      &__image {
+        width: 300px;
+        height: 400px;
+      }
+      &__title {
+        font-size: 1.75em;
+      }
+      &__icons {
+        font-size: 1.25em;
+      }
+    }
   }
 }

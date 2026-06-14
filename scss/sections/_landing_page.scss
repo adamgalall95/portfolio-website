@@ -2,65 +2,33 @@
 @use "../partials/fonts";
 @use "../mixins/media";
 
-.navbar {
-  height: 5vh;
-  background-color: colors.$bg-color;
-
+.home {
+  height: 95vh;
+  padding: 0 2.5em;
   display: flex;
-  flex: row;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
-  gap: 0.5em;
-  padding: 0 0.75em;
+  background-color: colors.$primary-color;
 
-  &__link {
-    color: colors.$primary-color;
-    font-family: fonts.$font-heading;
-    font-size: 1em;
+  &__title {
+    color: colors.$bg-color;
+    margin: 2vw 0em;
+    font-size: 2.5em;
     font-weight: bold;
-    text-decoration: none;
+    font-family: fonts.$font-heading;
+    text-shadow: 0.08rem 0.08rem black;
   }
 }
 
-.home {
-  background-color: colors.$primary-color;
+@include media.breakpoint(desktop) {
+  .home {
+    height: 90vh;
+    padding: 0 16em;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  padding-left: 1em;
-
-  &__text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    color: colors.$bg-color;
-    gap: 1em;
-
-    &--name {
-      font-size: 2em;
-      font-weight: bold;
-      font-family: fonts.$font-heading;
-      text-shadow: 0.08rem 0.08rem black;
-    }
-    &--title {
-      font-size: 1em;
-      font-family: fonts.$font-heading;
-      text-shadow: 0.08rem 0.08rem black;
-    }
-  }
-
-  img {
-    width: 50%;
-  }
-
-  @include media.breakpoint(desktop) {
-    img {
-      width: 30%;
+    &__title {
+      font-size: 5em;
     }
   }
 }

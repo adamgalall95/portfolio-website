@@ -1,0 +1,34 @@
+@use "../partials/colors";
+@use "../partials/fonts";
+@use "../mixins/media";
+
+.navbar {
+  height: 5vh;
+  background-color: colors.$bg-color;
+
+  display: flex;
+  flex: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 0.5em;
+  padding: 0 0.75em;
+
+  &__link {
+    color: colors.$primary-color;
+    font-family: fonts.$font-heading;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+@include media.breakpoint(desktop) {
+  .navbar {
+    height: 10vh;
+    gap: 1em;
+    &__link {
+      font-size: 1.75em;
+    }
+  }
+}
