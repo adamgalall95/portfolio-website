@@ -52,6 +52,14 @@
       flex-direction: row;
       gap: 0.75em;
       color: colors.$primary-color;
+
+      &--link,
+      &--link:visited,
+      &--link:hover,
+      &--link:active {
+        color: inherit;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -63,7 +71,8 @@
       font-size: 5em;
     }
     .projects-container {
-      gap: 6.5em;
+      gap: 12em;
+      margin: 0 10em;
       padding-bottom: 5em;
     }
     .projects-card {
