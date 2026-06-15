@@ -40,6 +40,13 @@
       font-size: 1em;
       font-family: fonts.$font-body;
       text-shadow: 0.025rem 0.025rem black;
+
+      &:visited,
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+      text-decoration: none;
     }
   }
 }
