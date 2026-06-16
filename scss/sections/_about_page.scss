@@ -11,15 +11,15 @@
   background-color: colors.$bg-color;
 
   &__title {
+    height: 2vh;
     padding-left: 1em;
-    height: 5vh;
     color: colors.$primary-color;
     font-family: fonts.$font-heading;
     font-size: 2.5em;
   }
 
   .about-body {
-    height: 95vh;
+    height: 98vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,9 +31,42 @@
       font-size: 1.25em;
     }
 
-    // img {
-    //   width: 100%;
-    // }
+    &__rotating-text {
+      position: relative;
+      display: inline-block;
+      width: 180px;
+      height: 1.2em;
+      vertical-align: bottom;
+
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        font-weight: 600;
+        animation: rotate 10s infinite;
+      }
+
+      span:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      span:nth-child(2) {
+        animation-delay: 2s;
+      }
+
+      span:nth-child(3) {
+        animation-delay: 4s;
+      }
+
+      span:nth-child(4) {
+        animation-delay: 6s;
+      }
+
+      span:nth-child(5) {
+        animation-delay: 8s;
+      }
+    }
 
     // .about-actions {
     //   display: flex;
@@ -63,7 +96,24 @@
     // }
   }
 }
+@keyframes rotate {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
+  5%,
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
 @include media.breakpoint(desktop) {
   .about {
     padding: 0;
@@ -74,17 +124,17 @@
     .about-body {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      // align-items: center;
 
       &__text {
-        font-size: 1.5em;
-        padding-left: 3em;
-        padding-bottom: 3em;
+        margin-top: 2em;
+        padding-left: 2.5em;
+        font-size: 2em;
       }
       img {
-        padding-top: 10em;
-        max-width: 500x;
-        max-height: 500px;
+        margin-top: 2.2em;
+        max-width: 650x;
+        max-height: 650px;
       }
     }
   }
