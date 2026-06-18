@@ -24,6 +24,16 @@
 
 @include media.breakpoint(desktop) {
   .home {
+    padding: 0 4em;
+
+    &__title {
+      font-size: 3em;
+    }
+  }
+}
+
+@include media.breakpoint(larges-creen) {
+  .home {
     padding: 0 5em;
 
     &__title {

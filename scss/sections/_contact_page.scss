@@ -56,12 +56,31 @@
     height: 10vh;
 
     .contact-container {
-      gap: 4em;
+      gap: 5em;
     }
     .contact-card {
       gap: 0.5em;
       &--logo {
         font-size: 3em;
+      }
+      &--link {
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+@include media.breakpoint(larges-creen) {
+  .contact {
+    height: 10vh;
+
+    .contact-container {
+      gap: 5em;
+    }
+    .contact-card {
+      gap: 0.5em;
+      &--logo {
+        font-size: 3.5em;
       }
       &--link {
         font-size: 1.5em;
