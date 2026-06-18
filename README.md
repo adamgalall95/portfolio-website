@@ -4,6 +4,11 @@ Welcome to my portfolio repository.
 
 This website showcases who I am, the projects I've developed, and the technologies I've been learning throughout my software development journey at _nology. It is an ongoing project where I continue to improve my frontend skills, explore new ideas, and refine my design.
 
+
+## Website Screenshot
+
+![Website Screenshot](./assets/website-screenshot.png)
+
 ## Purpose
 
 * Showcase my projects and technical skills
