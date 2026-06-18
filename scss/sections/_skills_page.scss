@@ -54,15 +54,40 @@
 @include media.breakpoint(desktop) {
   .skills {
     &__title {
-      font-size: 5em;
+      height: 15vh;
+      font-size: 4em;
     }
     &__list {
+      height: 85vh;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
       justify-items: center;
       align-items: center;
       gap: 7.5em;
       padding-bottom: 3em;
+    }
+    &__card {
+      &--logo {
+        font-size: 3.5em;
+      }
+      &--title {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+@include media.breakpoint(larges-creen) {
+  .skills {
+    &__title {
+      font-size: 5em;
+    }
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;
+      align-items: center;
+      gap: 7.5em;
     }
     &__card {
       &--logo {

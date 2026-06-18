@@ -68,23 +68,48 @@
   .projects {
     &__title {
       color: colors.$primary-color;
-      font-size: 5em;
+      font-size: 4em;
     }
     .projects-container {
-      gap: 12em;
+      gap: 8em;
       margin: 0 10em;
       padding-bottom: 5em;
     }
     .projects-card {
       &__image {
-        width: 300px;
-        height: 400px;
+        width: 250px;
+        height: 350px;
       }
       &__title {
-        font-size: 1.75em;
+        font-size: 1.5em;
       }
       &__icons {
         font-size: 1.25em;
+      }
+    }
+  }
+}
+
+@include media.breakpoint(larges-creen) {
+  .projects {
+    &__title {
+      color: colors.$primary-color;
+      font-size: 5em;
+    }
+    .projects-container {
+      gap: 15em;
+      padding-bottom: 5em;
+    }
+    .projects-card {
+      &__image {
+        width: 250px;
+        height: 300px;
+      }
+      &__title {
+        font-size: 1.5em;
+      }
+      &__icons {
+        font-size: 1em;
       }
     }
   }

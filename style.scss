@@ -7,3 +7,11 @@
 @use "./scss/sections/projects_page";
 @use "./scss/sections/contact_page";
 @use "./scss/sections/navbar_section";
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
