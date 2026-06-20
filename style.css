@@ -248,12 +248,11 @@ input[type=checkbox], input[type=radio] {
 .home__title {
   color: #f6f6ee;
   margin: 2vw 0em;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bold;
   font-family: "Arvo", serif;
   text-shadow: 0.08rem 0.08rem black;
 }
-
 @media (min-width: 768px) {
   .home {
     padding: 0 4em;
@@ -270,6 +269,7 @@ input[type=checkbox], input[type=radio] {
     font-size: 4em;
   }
 }
+
 .about {
   padding-left: 2.5em;
   height: 100vh;
@@ -279,8 +279,9 @@ input[type=checkbox], input[type=radio] {
 }
 .about__title {
   height: 10vh;
+  display: flex;
+  align-items: center;
   margin: 0;
-  padding-top: 0.75em;
   color: #d74339;
   font-family: "Arvo", serif;
   font-size: 2.5em;
@@ -308,6 +309,8 @@ input[type=checkbox], input[type=radio] {
   color: #d74339;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.25em;
+  font-weight: 500;
+  padding-right: 0.75em;
 }
 
 @media (min-width: 768px) {
@@ -315,22 +318,18 @@ input[type=checkbox], input[type=radio] {
     padding-left: 3em;
   }
   .about__title {
-    padding-top: 1em;
     height: 15vh;
     font-size: 4em;
   }
   .about .about-body {
     width: 100%;
     height: 85vh;
-    display: flex;
     flex-direction: row;
   }
   .about .about-body__img {
     width: 45%;
     height: 100%;
-    display: flex;
     flex-direction: row;
-    align-items: flex-end;
   }
   .about .about-body__img img {
     width: 100%;
@@ -339,10 +338,8 @@ input[type=checkbox], input[type=radio] {
   .about .about-body__text {
     width: 55%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    padding-right: 0;
     justify-content: flex-start;
-    font-size: 1.25em;
   }
 }
 @media (min-width: 1200px) {
@@ -350,34 +347,14 @@ input[type=checkbox], input[type=radio] {
     padding-left: 5em;
   }
   .about__title {
-    height: 15vh;
-    padding-bottom: 0.5em;
     font-size: 5em;
-  }
-  .about .about-body {
-    width: 100%;
-    height: 85vh;
-    display: flex;
-    flex-direction: row;
   }
   .about .about-body__img {
     width: 35%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-  .about .about-body__img img {
-    width: 100%;
-    height: auto;
   }
   .about .about-body__text {
     width: 65%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-size: 2em;
+    font-size: 1.75em;
   }
 }
 .skills {
@@ -390,7 +367,6 @@ input[type=checkbox], input[type=radio] {
 }
 .skills__title {
   height: 10vh;
-  color: #f6f6ee;
   font-family: "Arvo", serif;
   text-shadow: 0.08rem 0.08rem black;
   font-size: 2.5em;
@@ -411,17 +387,14 @@ input[type=checkbox], input[type=radio] {
   align-items: center;
   justify-content: center;
   gap: 0.5em;
+  text-shadow: 0.05rem 0.05rem black;
 }
 .skills__card--logo {
-  color: #f6f6ee;
   font-size: 3em;
-  text-shadow: 0.05rem 0.05rem black;
 }
 .skills__card--title {
-  color: #f6f6ee;
   font-size: 1em;
   font-family: "IBM Plex Sans", sans-serif;
-  text-shadow: 0.05rem 0.05rem black;
 }
 
 @media (min-width: 768px) {
@@ -433,16 +406,10 @@ input[type=checkbox], input[type=radio] {
     height: 85vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
     gap: 7.5em;
-    padding-bottom: 3em;
   }
   .skills__card--logo {
     font-size: 3.5em;
-  }
-  .skills__card--title {
-    font-size: 1em;
   }
 }
 @media (min-width: 1200px) {
@@ -451,10 +418,6 @@ input[type=checkbox], input[type=radio] {
   }
   .skills__list {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-    gap: 7.5em;
   }
   .skills__card--logo {
     font-size: 4.5em;
@@ -472,7 +435,7 @@ input[type=checkbox], input[type=radio] {
 .projects__title {
   color: #d74339;
   font-size: 2.5em;
-  font-weight: bold;
+  font-weight: 700;
   font-family: "Arvo", serif;
 }
 .projects .projects-container {
@@ -489,7 +452,6 @@ input[type=checkbox], input[type=radio] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1em;
 }
 .projects .projects-card__image {
   width: 200px;
@@ -500,7 +462,7 @@ input[type=checkbox], input[type=radio] {
 .projects .projects-card__title {
   font-size: 1.25em;
   font-family: "IBM Plex Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   color: #d74339;
 }
 .projects .projects-card__icons {
@@ -509,14 +471,13 @@ input[type=checkbox], input[type=radio] {
   gap: 0.75em;
   color: #d74339;
 }
-.projects .projects-card__icons--link, .projects .projects-card__icons--link:visited, .projects .projects-card__icons--link:hover, .projects .projects-card__icons--link:active {
+.projects .projects-card__icons--link {
   color: inherit;
   text-decoration: none;
 }
 
 @media (min-width: 768px) {
   .projects__title {
-    color: #d74339;
     font-size: 4em;
   }
   .projects .projects-container {
@@ -537,22 +498,17 @@ input[type=checkbox], input[type=radio] {
 }
 @media (min-width: 1200px) {
   .projects__title {
-    color: #d74339;
     font-size: 5em;
   }
   .projects .projects-container {
     gap: 15em;
-    padding-bottom: 5em;
   }
   .projects .projects-card__image {
     width: 250px;
     height: 300px;
   }
-  .projects .projects-card__title {
-    font-size: 1.5em;
-  }
   .projects .projects-card__icons {
-    font-size: 1em;
+    font-size: 1.25em;
   }
 }
 .contact {
@@ -568,7 +524,7 @@ input[type=checkbox], input[type=radio] {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2;
+  padding: 0 2em;
   gap: 1em;
 }
 .contact .contact-card {
@@ -576,22 +532,16 @@ input[type=checkbox], input[type=radio] {
   flex-direction: row;
   align-items: center;
   gap: 0.25em;
+  text-shadow: 0.025rem 0.025rem black;
+  color: #f6f6ee;
 }
 .contact .contact-card--logo {
-  color: #f6f6ee;
-  text-shadow: 0.025rem 0.025rem black;
   font-size: 1.5em;
 }
 .contact .contact-card--link {
-  color: #f6f6ee;
+  color: inherit;
   font-size: 1em;
   font-family: "IBM Plex Sans", sans-serif;
-  text-shadow: 0.025rem 0.025rem black;
-}
-.contact .contact-card--link:visited, .contact .contact-card--link:hover, .contact .contact-card--link:active {
-  text-decoration: none;
-}
-.contact .contact-card--link {
   text-decoration: none;
 }
 
@@ -613,15 +563,6 @@ input[type=checkbox], input[type=radio] {
   }
 }
 @media (min-width: 1200px) {
-  .contact {
-    height: 10vh;
-  }
-  .contact .contact-container {
-    gap: 5em;
-  }
-  .contact .contact-card {
-    gap: 0.5em;
-  }
   .contact .contact-card--logo {
     font-size: 3.5em;
   }
@@ -677,6 +618,7 @@ body::before {
   inset: 0;
   background: rgba(0, 0, 0, 0.1);
   z-index: 2;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */

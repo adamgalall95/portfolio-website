@@ -18,7 +18,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    padding: 2;
+    padding: 0 2em;
     gap: 1em;
   }
 
@@ -28,24 +28,17 @@
     align-items: center;
 
     gap: 0.25em;
+    text-shadow: 0.025rem 0.025rem black;
+    color: colors.$bg-color;
 
     &--logo {
-      color: colors.$bg-color;
-      text-shadow: 0.025rem 0.025rem black;
       font-size: 1.5em;
     }
 
     &--link {
-      color: colors.$bg-color;
+      color: inherit;
       font-size: 1em;
       font-family: fonts.$font-body;
-      text-shadow: 0.025rem 0.025rem black;
-
-      &:visited,
-      &:hover,
-      &:active {
-        text-decoration: none;
-      }
       text-decoration: none;
     }
   }
@@ -72,13 +65,7 @@
 
 @include media.breakpoint(larges-creen) {
   .contact {
-    height: 10vh;
-
-    .contact-container {
-      gap: 5em;
-    }
     .contact-card {
-      gap: 0.5em;
       &--logo {
         font-size: 3.5em;
       }
