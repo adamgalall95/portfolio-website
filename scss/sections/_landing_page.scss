@@ -15,25 +15,21 @@
   &__title {
     color: colors.$bg-color;
     margin: 2vw 0em;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
     font-family: fonts.$font-heading;
     text-shadow: 0.08rem 0.08rem black;
   }
-}
 
-@include media.breakpoint(desktop) {
-  .home {
+  @include media.breakpoint(desktop) {
     padding: 0 4em;
 
     &__title {
       font-size: 3em;
     }
   }
-}
 
-@include media.breakpoint(larges-creen) {
-  .home {
+  @include media.breakpoint(larges-creen) {
     padding: 0 5em;
 
     &__title {

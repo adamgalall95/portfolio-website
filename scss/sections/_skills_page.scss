@@ -12,7 +12,6 @@
 
   &__title {
     height: 10vh;
-    color: colors.$bg-color;
     font-family: fonts.$font-heading;
     text-shadow: 0.08rem 0.08rem black;
     font-size: 2.5em;
@@ -35,18 +34,15 @@
     align-items: center;
     justify-content: center;
     gap: 0.5em;
+    text-shadow: 0.05rem 0.05rem black;
 
     &--logo {
-      color: colors.$bg-color;
       font-size: 3em;
-      text-shadow: 0.05rem 0.05rem black;
     }
 
     &--title {
-      color: colors.$bg-color;
       font-size: 1em;
       font-family: fonts.$font-body;
-      text-shadow: 0.05rem 0.05rem black;
     }
   }
 }
@@ -61,17 +57,11 @@
       height: 85vh;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      justify-items: center;
-      align-items: center;
       gap: 7.5em;
-      padding-bottom: 3em;
     }
     &__card {
       &--logo {
         font-size: 3.5em;
-      }
-      &--title {
-        font-size: 1em;
       }
     }
   }
@@ -84,10 +74,6 @@
     }
     &__list {
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      justify-items: center;
-      align-items: center;
-      gap: 7.5em;
     }
     &__card {
       &--logo {
