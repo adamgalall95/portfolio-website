@@ -1,19 +1,14 @@
 @use "../partials/colors";
 @use "../partials/fonts";
 @use "../mixins/media";
+@use "../mixins/placeholders";
 
 .projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: colors.$bg-color;
+  @include placeholders.section-layout(colors.$bg-color);
 
   &__title {
+    @include placeholders.section-title;
     color: colors.$primary-color;
-    font-size: 2.5em;
-    font-weight: 700;
-    font-family: fonts.$font-heading;
   }
 
   .projects-container {
@@ -41,8 +36,8 @@
     }
     &__title {
       font-size: 1.25em;
-      font-family: fonts.$font-body;
       font-weight: 700;
+      font-family: fonts.$font-body;
       color: colors.$primary-color;
     }
     &__icons {
@@ -62,12 +57,12 @@
 @include media.breakpoint(desktop) {
   .projects {
     &__title {
+      justify-content: left;
       font-size: 4em;
     }
     .projects-container {
+      padding: 4em;
       gap: 8em;
-      margin: 0 10em;
-      padding-bottom: 5em;
     }
     .projects-card {
       &__image {
@@ -86,20 +81,12 @@
 
 @include media.breakpoint(larges-creen) {
   .projects {
+    padding: 5em;
     &__title {
       font-size: 5em;
     }
     .projects-container {
-      gap: 15em;
-    }
-    .projects-card {
-      &__image {
-        width: 250px;
-        height: 300px;
-      }
-      &__icons {
-        font-size: 1.25em;
-      }
+      gap: 10em;
     }
   }
 }
